@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="丝路寻纹设计课堂，学习丝路纹样历史、构图、配色与元素提取。" />
+    <title>设计课堂 | 丝路寻纹</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header" id="top">
+        <a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true">纹</span><span>丝路寻纹</span></a>
+        <nav class="desktop-nav" aria-label="主导航">
+          <a href="./index.html">首页</a>
+          <a href="./map.html">丝路地图</a>
+          <a href="./patterns.html">纹样库</a>
+          <a class="active" href="./learning.html">设计课堂</a>
+          <a href="./profile.html">我的</a>
+        </nav>
+        <a class="header-action nav-button" href="./patterns.html">打开纹样库</a>
+      </header>
+
+      <main>
+        <section class="section page-hero">
+          <div>
+            <p class="seal-text">从文化知识到设计方法</p>
+            <h1>设计课堂</h1>
+            <p class="hero-lead">从历史、构图、配色到元素提取，逐步把丝路纹样转化为可应用的视觉语言。</p>
+          </div>
+          <div class="hero-mini-art learning-art" aria-hidden="true"></div>
+        </section>
+
+        <section class="section learning page-learning" aria-labelledby="learning-title">
+          <div class="section-heading reveal">
+            <span class="vertical-mark" aria-hidden="true"></span>
+            <div>
+              <h2 id="learning-title">课程列表</h2>
+              <p>切换分类，查看不同学习路径。</p>
+            </div>
+          </div>
+          <div class="tabs reveal" role="tablist" aria-label="课程分类">
+            <button class="tab active" data-tab="推荐" role="tab">推荐</button>
+            <button class="tab" data-tab="基础知识" role="tab">基础知识</button>
+            <button class="tab" data-tab="设计技巧" role="tab">设计技巧</button>
+            <button class="tab" data-tab="文化解读" role="tab">文化解读</button>
+          </div>
+          <div class="course-list" id="courseList"></div>
+        </section>
+      </main>
+
+      <nav class="mobile-nav" aria-label="移动端底部导航">
+        <a href="./index.html"><span class="nav-home"></span>首页</a>
+        <a href="./map.html"><span class="nav-compass"></span>探索</a>
+        <a href="./patterns.html"><span class="nav-bookmark"></span>纹样库</a>
+        <a href="./learning.html" class="active"><span class="nav-book"></span>学习</a>
+        <a href="./profile.html"><span class="nav-user"></span>我的</a>
+      </nav>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

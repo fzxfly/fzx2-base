@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="丝路寻纹个人中心，管理收藏、作品、笔记与下载。" />
+    <title>我的 | 丝路寻纹</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header" id="top">
+        <a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true">纹</span><span>丝路寻纹</span></a>
+        <nav class="desktop-nav" aria-label="主导航">
+          <a href="./index.html">首页</a>
+          <a href="./map.html">丝路地图</a>
+          <a href="./patterns.html">纹样库</a>
+          <a href="./learning.html">设计课堂</a>
+          <a class="active" href="./profile.html">我的</a>
+        </nav>
+        <a class="header-action nav-button" href="./patterns.html">继续收藏</a>
+      </header>
+
+      <main>
+        <section class="section page-hero">
+          <div>
+            <p class="seal-text">个人资料库</p>
+            <h1>我的</h1>
+            <p class="hero-lead">收藏纹样、整理笔记、保存课程进度，让每一次浏览都沉淀为自己的文化资料库。</p>
+          </div>
+          <div class="hero-mini-art profile-art" aria-hidden="true"></div>
+        </section>
+
+        <section class="section profile page-profile" aria-labelledby="profile-title">
+          <div class="profile-card reveal">
+            <div class="avatar-illustration" aria-hidden="true"></div>
+            <div>
+              <h2 id="profile-title">丝路行者</h2>
+              <p>本周已学习 4 个纹样专题，新增 8 条纹样笔记，收藏集中在敦煌植物纹样与几何边饰。</p>
+              <div class="stats">
+                <span><strong id="favoriteCount">0</strong>收藏</span>
+                <span><strong>36</strong>作品</span>
+                <span><strong>12</strong>关注</span>
+              </div>
+            </div>
+          </div>
+          <div class="note-panel reveal">
+            <button><span class="note-icon"></span>我的笔记</button>
+            <button><span class="work-icon"></span>我的作品</button>
+            <button><span class="download-icon"></span>下载管理</button>
+            <button><span class="setting-icon"></span>设置</button>
+          </div>
+        </section>
+
+        <section class="section collection-preview">
+          <div class="section-heading reveal">
+            <span class="vertical-mark" aria-hidden="true"></span>
+            <div>
+              <h2>我的收藏</h2>
+              <p>纹样库中加入收藏的内容会在这里同步出现。</p>
+            </div>
+          </div>
+          <div class="pattern-grid favorites-grid" id="myFavorites"></div>
+        </section>
+
+        <section class="section collection-preview">
+          <div class="section-heading reveal">
+            <span class="vertical-mark" aria-hidden="true"></span>
+            <div>
+              <h2>最近收藏</h2>
+              <p>快速回到你常用的纹样素材。</p>
+            </div>
+          </div>
+          <div class="mini-patterns wide" id="recentFavorites"></div>
+        </section>
+      </main>
+
+      <nav class="mobile-nav" aria-label="移动端底部导航">
+        <a href="./index.html"><span class="nav-home"></span>首页</a>
+        <a href="./map.html"><span class="nav-compass"></span>探索</a>
+        <a href="./patterns.html"><span class="nav-bookmark"></span>纹样库</a>
+        <a href="./learning.html"><span class="nav-book"></span>学习</a>
+        <a href="./profile.html" class="active"><span class="nav-user"></span>我的</a>
+      </nav>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

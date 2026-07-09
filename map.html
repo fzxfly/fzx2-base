@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="丝路寻纹丝路地图，展示丝绸之路主要地标与文化注释。" />
+    <title>丝路地图 | 丝路寻纹</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header" id="top">
+        <a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true">纹</span><span>丝路寻纹</span></a>
+        <nav class="desktop-nav" aria-label="主导航">
+          <a href="./index.html">首页</a>
+          <a class="active" href="./map.html">丝路地图</a>
+          <a href="./patterns.html">纹样库</a>
+          <a href="./learning.html">设计课堂</a>
+          <a href="./profile.html">我的</a>
+        </nav>
+        <a class="header-action nav-button" href="./patterns.html">查看纹样</a>
+      </header>
+
+      <main>
+        <section class="section page-hero map-page-hero">
+          <div>
+            <p class="seal-text">路线、绿洲与文化节点</p>
+            <h1>丝路地图</h1>
+            <p class="hero-lead">点击地图中的地标，查看城市在商贸、宗教艺术和纹样传播中的位置。</p>
+          </div>
+          <div class="route-art hero-mini-art" aria-hidden="true"></div>
+        </section>
+
+        <section class="section silk-map page-main-map" aria-labelledby="map-title">
+          <div class="map-copy reveal">
+            <div class="section-heading compact">
+              <span class="vertical-mark" aria-hidden="true"></span>
+              <div>
+                <h2 id="map-title">主要路线</h2>
+                <p>示意路线从中原出发，经河西走廊与西域绿洲继续向中亚延展。</p>
+              </div>
+            </div>
+            <div class="map-info" id="mapInfo">
+              <p class="city-label">甘肃省敦煌市</p>
+              <h3>敦煌莫高窟</h3>
+              <p>位于河西走廊西端，是丝绸之路上融合佛教艺术、建筑、壁画与彩塑的重要遗产。洞窟壁画中的飞天、莲花、卷草纹与供养人图像，记录了多元文化相遇的痕迹。</p>
+              <a class="primary-btn nav-button small" href="./patterns.html">查看相关纹样</a>
+            </div>
+          </div>
+          <div class="map-panel reveal" aria-label="丝绸之路示意地图">
+            <svg viewBox="0 0 900 560" role="img" aria-labelledby="mapSvgTitle">
+              <title id="mapSvgTitle">丝绸之路主要城市路线示意</title>
+              <path class="map-land" d="M62 374 C145 278 207 315 294 226 C382 136 473 197 563 116 C665 23 741 97 840 52 L840 500 L62 500 Z" />
+              <path class="map-sea" d="M590 375 C690 310 767 338 860 289 L860 560 L558 560 C536 489 544 417 590 375 Z" />
+              <path class="route-line" d="M94 410 C174 355 204 286 296 296 C366 305 377 212 457 231 C545 250 548 160 642 153 C716 147 753 102 826 92" />
+            </svg>
+            <div class="map-cities">
+              <button class="map-pin active" data-city="敦煌莫高窟" data-sub="甘肃省敦煌市" data-text="位于河西走廊西端，是丝绸之路上融合佛教艺术、建筑、壁画与彩塑的重要遗产。洞窟壁画中的飞天、莲花、卷草纹与供养人图像，记录了多元文化相遇的痕迹。" style="--x: 50.5%; --y: 41.4%"><span>敦煌</span></button>
+              <button class="map-pin" data-city="长安" data-sub="今陕西西安" data-text="汉唐都城长安是陆上丝绸之路东方起点之一，来自各地的使节、商旅与工匠在这里汇聚，带来开放而华丽的都市气象。" style="--x: 91.1%; --y: 16.4%"><span>长安</span></button>
+              <button class="map-pin" data-city="吐鲁番" data-sub="新疆绿洲" data-text="吐鲁番盆地连接天山南北路，高昌故城、交河故城和葡萄沟共同呈现绿洲文明、交通补给与多民族生活的历史层次。" style="--x: 32.9%; --y: 52.8%"><span>吐鲁番</span></button>
+              <button class="map-pin" data-city="撒马尔罕" data-sub="中亚名城" data-text="撒马尔罕是丝路西段的重要枢纽，几何纹样、蓝釉建筑和集市文化使它成为东西方艺术交流的醒目节点。" style="--x: 10.4%; --y: 73.2%"><span>撒马尔罕</span></button>
+            </div>
+            <div class="map-ornament city-ornament" aria-hidden="true"></div>
+          </div>
+        </section>
+
+        <section class="section feature-strip">
+          <article><strong>长安</strong><span>东方起点与国际都会</span></article>
+          <article><strong>敦煌</strong><span>石窟艺术与壁画宝库</span></article>
+          <article><strong>吐鲁番</strong><span>绿洲补给与多族群生活</span></article>
+          <article><strong>撒马尔罕</strong><span>中亚贸易与建筑纹样</span></article>
+        </section>
+      </main>
+
+      <nav class="mobile-nav" aria-label="移动端底部导航">
+        <a href="./index.html"><span class="nav-home"></span>首页</a>
+        <a href="./map.html" class="active"><span class="nav-compass"></span>探索</a>
+        <a href="./patterns.html"><span class="nav-bookmark"></span>纹样库</a>
+        <a href="./learning.html"><span class="nav-book"></span>学习</a>
+        <a href="./profile.html"><span class="nav-user"></span>我的</a>
+      </nav>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

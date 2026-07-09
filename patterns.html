@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="丝路寻纹纹样库，按类别搜索丝绸之路相关纹样。" />
+    <title>纹样库 | 丝路寻纹</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header" id="top">
+        <a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true">纹</span><span>丝路寻纹</span></a>
+        <nav class="desktop-nav" aria-label="主导航">
+          <a href="./index.html">首页</a>
+          <a href="./map.html">丝路地图</a>
+          <a class="active" href="./patterns.html">纹样库</a>
+          <a href="./learning.html">设计课堂</a>
+          <a href="./profile.html">我的</a>
+        </nav>
+        <a class="header-action nav-button" href="./learning.html">学习提取</a>
+      </header>
+
+      <main>
+        <section class="section page-hero">
+          <div>
+            <p class="seal-text">分类检索、收藏与应用</p>
+            <h1>纹样库</h1>
+            <p class="hero-lead">按植物、动物、几何、人物、器物、建筑浏览丝路纹样，并查看每个纹样的年代、地点和文化说明。</p>
+          </div>
+          <div class="hero-mini-art pattern-lotus" aria-hidden="true"></div>
+        </section>
+
+        <section class="section pattern-library page-patterns" aria-labelledby="patterns-title">
+          <div class="section-heading reveal">
+            <span class="vertical-mark" aria-hidden="true"></span>
+            <div>
+              <h2 id="patterns-title">浏览纹样</h2>
+              <p>搜索名称、年代或地点，点击卡片可打开详情。</p>
+            </div>
+          </div>
+          <div class="search-row reveal">
+            <label class="search-box">
+              <span aria-hidden="true"></span>
+              <input id="patternSearch" type="search" placeholder="搜索纹样、故事、地点" />
+            </label>
+            <button class="scan-btn" aria-label="识别纹样"></button>
+          </div>
+          <div class="category-grid reveal" aria-label="纹样分类">
+            <button class="category active" data-filter="全部"><span class="cat-plant"></span>全部</button>
+            <button class="category" data-filter="植物纹样"><span class="cat-plant"></span>植物纹样</button>
+            <button class="category" data-filter="动物纹样"><span class="cat-animal"></span>动物纹样</button>
+            <button class="category" data-filter="几何纹样"><span class="cat-geo"></span>几何纹样</button>
+            <button class="category" data-filter="人物纹样"><span class="cat-figure"></span>人物纹样</button>
+            <button class="category" data-filter="建筑纹样"><span class="cat-arch"></span>建筑纹样</button>
+          </div>
+          <div class="pattern-grid" id="patternGrid"></div>
+        </section>
+
+      </main>
+
+      <nav class="mobile-nav" aria-label="移动端底部导航">
+        <a href="./index.html"><span class="nav-home"></span>首页</a>
+        <a href="./map.html"><span class="nav-compass"></span>探索</a>
+        <a href="./patterns.html" class="active"><span class="nav-bookmark"></span>纹样库</a>
+        <a href="./learning.html"><span class="nav-book"></span>学习</a>
+        <a href="./profile.html"><span class="nav-user"></span>我的</a>
+      </nav>
+    </div>
+
+    <dialog class="pattern-dialog" id="patternDialog">
+      <button class="dialog-close" aria-label="关闭详情"></button>
+      <div class="dialog-art" id="dialogArt"></div>
+      <div class="dialog-body">
+        <h3 id="dialogTitle">莲花纹</h3>
+        <p class="dialog-meta" id="dialogMeta">植物纹样 · 唐代 · 敦煌</p>
+        <p id="dialogText"></p>
+        <button class="primary-btn favorite-toggle">加入收藏</button>
+      </div>
+    </dialog>
+    <script src="./script.js"></script>
+  </body>
+</html>
