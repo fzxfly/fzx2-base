@@ -697,7 +697,9 @@ h2 {
 }
 
 .pattern-lotus,
+.pattern-baoxiang,
 .pattern-vine,
+.pattern-camel,
 .pattern-geo,
 .pattern-arch {
   background:
@@ -708,6 +710,14 @@ h2 {
   background-size: 140px 140px, 140px 140px, 140px 140px, auto;
 }
 
+.pattern-lotus {
+  background-image:
+    linear-gradient(180deg, rgba(255, 246, 225, 0.08), rgba(91, 47, 18, 0.08)),
+    url("./assets/lotus-pattern-display.png");
+  background-size: cover;
+  background-position: center;
+}
+
 .pattern-vine {
   background:
     radial-gradient(ellipse at 18% 18%, transparent 26%, #d6a85c 27% 30%, transparent 31%),
@@ -715,6 +725,22 @@ h2 {
     linear-gradient(45deg, transparent 46%, rgba(250, 226, 178, 0.7) 47% 53%, transparent 54%),
     #1f6a5a;
   background-size: 96px 96px;
+}
+
+.pattern-camel {
+  background-image:
+    linear-gradient(180deg, rgba(255, 246, 225, 0.08), rgba(91, 47, 18, 0.08)),
+    url("./assets/camel-pattern-display.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.pattern-baoxiang {
+  background-image:
+    linear-gradient(180deg, rgba(255, 246, 225, 0.08), rgba(91, 47, 18, 0.08)),
+    url("./assets/baoxiang-pattern-display.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .pattern-geo {
@@ -1165,6 +1191,13 @@ h2 {
   background-size: 220px 220px, 220px 220px, 220px 220px, auto;
 }
 
+.large-pattern.pattern-lotus,
+.large-pattern.pattern-camel,
+.large-pattern.pattern-baoxiang {
+  background-size: cover;
+  background-position: center;
+}
+
 .detail-copy {
   padding: clamp(28px, 5vw, 56px);
 }
@@ -1200,6 +1233,13 @@ h2 {
   border-radius: 22px;
   border: 1px solid rgba(178, 142, 80, 0.3);
   background-size: 90px 90px;
+}
+
+.mini-patterns button.pattern-lotus,
+.mini-patterns button.pattern-camel,
+.mini-patterns button.pattern-baoxiang {
+  background-size: cover;
+  background-position: center;
 }
 
 .tabs {
@@ -1248,6 +1288,13 @@ h2 {
   border-radius: 22px;
   border: 1px solid rgba(116, 77, 32, 0.16);
   background-size: 140px 140px, 140px 140px, 140px 140px, auto;
+}
+
+.course-card .course-art.pattern-lotus,
+.course-card .course-art.pattern-camel,
+.course-card .course-art.pattern-baoxiang {
+  background-size: cover;
+  background-position: center;
 }
 
 .course-card .course-meta {
@@ -1430,6 +1477,13 @@ h2 {
 .dialog-art {
   height: 340px;
   background-size: 180px 180px;
+}
+
+.dialog-art.pattern-lotus,
+.dialog-art.pattern-camel,
+.dialog-art.pattern-baoxiang {
+  background-size: cover;
+  background-position: center;
 }
 
 .dialog-body {

@@ -20,7 +20,7 @@ const patterns = [
     type: "植物纹样",
     period: "盛唐",
     place: "长安",
-    cls: "pattern-lotus",
+    cls: "pattern-baoxiang",
     text: "融合莲花、牡丹与想象花形，结构饱满华丽，常见于金银器、织锦和佛教装饰中。"
   },
   {
@@ -44,7 +44,7 @@ const patterns = [
     type: "动物纹样",
     period: "汉唐",
     place: "河西走廊",
-    cls: "pattern-vine",
+    cls: "pattern-camel",
     text: "骆驼是商队与远行的象征，常与胡人、货包和沙漠场景共同出现，记录贸易路线的真实生活。"
   },
   {
