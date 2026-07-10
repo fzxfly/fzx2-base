@@ -27,7 +27,7 @@ body {
   font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", SimSun, serif;
   background-color: #f7ead0;
   background-image:
-    linear-gradient(180deg, rgba(255, 246, 225, 0.56), rgba(251, 242, 223, 0.78) 46%, rgba(247, 236, 214, 0.88)),
+    linear-gradient(180deg, rgba(255, 246, 225, 0.34), rgba(251, 242, 223, 0.5) 46%, rgba(247, 236, 214, 0.62)),
     url("./assets/silk-bg-wide-1.png");
   background-size: cover;
   background-position: center top;
@@ -40,9 +40,9 @@ body::before {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  opacity: 0.72;
+  opacity: 0.46;
   background:
-    radial-gradient(circle at 50% 22%, rgba(255, 247, 229, 0.74), transparent 34%),
+    radial-gradient(circle at 50% 22%, rgba(255, 247, 229, 0.48), transparent 34%),
     linear-gradient(90deg, rgba(112, 76, 34, 0.05) 1px, transparent 1px),
     linear-gradient(rgba(112, 76, 34, 0.045) 1px, transparent 1px);
   background-size: auto, 38px 38px, 38px 38px;
@@ -57,8 +57,8 @@ body::after {
   z-index: -1;
   pointer-events: none;
   background:
-    linear-gradient(90deg, rgba(251, 242, 223, 0.42), transparent 18%, transparent 82%, rgba(251, 242, 223, 0.42)),
-    linear-gradient(180deg, rgba(255, 248, 232, 0.38), transparent 42%, rgba(245, 224, 188, 0.5));
+    linear-gradient(90deg, rgba(251, 242, 223, 0.22), transparent 18%, transparent 82%, rgba(251, 242, 223, 0.22)),
+    linear-gradient(180deg, rgba(255, 248, 232, 0.18), transparent 42%, rgba(245, 224, 188, 0.28));
 }
 
 button,
@@ -87,49 +87,83 @@ a {
 }
 
 .site-header {
-  width: min(1180px, calc(100% - 40px));
-  height: 76px;
-  margin: 18px auto 0;
-  padding: 0 16px 0 22px;
-  display: flex;
+  width: min(1460px, calc(100% - 84px));
+  min-height: 148px;
+  margin: 26px auto 0;
+  padding: 24px 38px;
+  display: grid;
+  grid-template-columns: minmax(360px, 0.9fr) minmax(470px, 1fr) auto;
   align-items: center;
-  justify-content: space-between;
-  border: 1px solid rgba(178, 142, 80, 0.28);
-  border-radius: 999px;
-  background: rgba(255, 248, 232, 0.88);
-  backdrop-filter: blur(18px);
+  gap: 34px;
+  border: 1px solid rgba(178, 142, 80, 0.22);
+  border-radius: 44px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.62), rgba(255, 247, 229, 0.74)),
+    rgba(255, 248, 232, 0.84);
+  backdrop-filter: blur(22px);
   position: sticky;
   top: 14px;
   z-index: 20;
-  box-shadow: 0 18px 50px rgba(80, 52, 19, 0.08);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.72),
+    0 24px 70px rgba(80, 52, 19, 0.1);
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 22px;
+  min-width: 0;
+  padding-right: 34px;
+  border-right: 1px solid rgba(178, 142, 80, 0.24);
   font-size: 22px;
   font-weight: 800;
   white-space: nowrap;
 }
 
 .brand-mark {
-  width: 38px;
-  height: 38px;
+  width: 74px;
+  height: 74px;
   border-radius: 50%;
   display: grid;
   place-items: center;
   color: #fff8e8;
-  background: var(--teal);
-  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.22);
+  font-size: 46px;
+  line-height: 1;
+  background:
+    radial-gradient(circle at 35% 25%, rgba(255, 255, 255, 0.2), transparent 34%),
+    linear-gradient(135deg, #2f806f, var(--teal-dark));
+  box-shadow:
+    inset 0 0 0 3px rgba(255, 255, 255, 0.22),
+    0 12px 24px rgba(20, 80, 68, 0.22);
+}
+
+.brand-copy {
+  display: grid;
+  gap: 7px;
+}
+
+.brand-copy strong {
+  font-size: clamp(38px, 3.6vw, 58px);
+  line-height: 0.98;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-shadow: 0 7px 0 rgba(196, 129, 44, 0.08);
+}
+
+.brand-copy small {
+  color: #7d684d;
+  font-size: clamp(17px, 1.35vw, 22px);
+  font-weight: 500;
 }
 
 .desktop-nav {
   display: flex;
   align-items: center;
-  gap: 28px;
+  justify-content: center;
+  gap: clamp(34px, 3.2vw, 68px);
   color: #5f4c35;
-  font-size: 16px;
+  font-size: clamp(19px, 1.5vw, 25px);
 }
 
 .desktop-nav a {
@@ -142,8 +176,9 @@ a {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 4px;
-  height: 2px;
+  bottom: 0;
+  height: 4px;
+  border-radius: 999px;
   background: var(--teal);
   transform: scaleX(0);
   transform-origin: left;
@@ -195,6 +230,13 @@ a {
     inset 0 1px 0 rgba(255, 255, 255, 0.28),
     inset 0 -8px 18px rgba(9, 46, 39, 0.18),
     0 14px 28px rgba(20, 80, 68, 0.18);
+}
+
+.header-action {
+  min-height: 58px;
+  padding: 0 34px;
+  font-size: clamp(18px, 1.35vw, 24px);
+  justify-self: end;
 }
 
 .ghost-btn {
@@ -323,21 +365,24 @@ h1 {
 }
 
 .hero-art {
-  min-height: 630px;
+  min-height: clamp(520px, 46vw, 650px);
+  aspect-ratio: 785 / 781;
   position: relative;
   isolation: isolate;
   border-radius: 38px;
   overflow: hidden;
-  background:
-    linear-gradient(140deg, rgba(255, 249, 235, 0.6), rgba(255, 235, 190, 0.28)),
-    radial-gradient(circle at 76% 18%, rgba(196, 129, 44, 0.22), transparent 20%),
-    linear-gradient(180deg, #fff6e6, #f4dfbc);
+  background: rgba(255, 248, 232, 0.46);
   box-shadow: var(--shadow);
   border: 1px solid rgba(176, 134, 70, 0.3);
 }
 
 .hero-art img {
-  display: none;
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .sun {
@@ -696,6 +741,17 @@ h2 {
   border: 1px solid rgba(116, 77, 32, 0.2);
 }
 
+.card-visual {
+  display: block;
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 24px;
+  border: 1px solid rgba(116, 77, 32, 0.18);
+  box-shadow: inset 0 0 0 1px rgba(255, 248, 232, 0.4);
+}
+
 .pattern-lotus,
 .pattern-baoxiang,
 .pattern-vine,
@@ -863,9 +919,9 @@ h2 {
 .silk-map {
   padding: 110px 0 0;
   display: grid;
-  grid-template-columns: 0.42fr 0.58fr;
-  gap: 28px;
-  align-items: stretch;
+  grid-template-columns: minmax(360px, 0.42fr) minmax(0, 0.58fr);
+  gap: 34px;
+  align-items: center;
 }
 
 .map-info {
@@ -885,7 +941,8 @@ h2 {
 }
 
 .map-panel {
-  min-height: 560px;
+  min-height: 0;
+  aspect-ratio: 890 / 734;
   border-radius: 34px;
   position: relative;
   overflow: hidden;
@@ -902,7 +959,13 @@ h2 {
 }
 
 .map-panel img {
-  display: none;
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .map-land {
@@ -1526,7 +1589,7 @@ h2 {
 @media (max-width: 980px) {
   body {
     background-image:
-      linear-gradient(180deg, rgba(255, 246, 225, 0.62), rgba(251, 242, 223, 0.84) 48%, rgba(247, 236, 214, 0.9)),
+      linear-gradient(180deg, rgba(255, 246, 225, 0.38), rgba(251, 242, 223, 0.58) 48%, rgba(247, 236, 214, 0.68)),
       url("./assets/silk-bg-wide-3.png");
     background-position: 58% top;
     background-attachment: scroll;
@@ -1552,7 +1615,7 @@ h2 {
   }
 
   .hero-art {
-    min-height: 520px;
+    min-height: 0;
   }
 
   .quick-entry,
@@ -1654,6 +1717,37 @@ h2 {
   }
 }
 
+@media (max-width: 1240px) and (min-width: 981px) {
+  .site-header {
+    width: min(1120px, calc(100% - 40px));
+    grid-template-columns: minmax(300px, 0.9fr) minmax(390px, 1fr) auto;
+    gap: 22px;
+    padding: 22px 26px;
+  }
+
+  .brand {
+    gap: 16px;
+    padding-right: 22px;
+  }
+
+  .brand-mark {
+    width: 62px;
+    height: 62px;
+    font-size: 38px;
+  }
+
+  .desktop-nav {
+    gap: 28px;
+    font-size: 18px;
+  }
+
+  .header-action {
+    min-height: 52px;
+    padding: 0 24px;
+    font-size: 18px;
+  }
+}
+
 @media (max-width: 620px) {
   .section {
     width: calc(100% - 24px);
@@ -1673,15 +1767,11 @@ h2 {
   }
 
   .hero-art {
-    min-height: 430px;
     border-radius: 28px;
   }
 
   .hero-art img {
-    width: 142px;
-    right: 14px;
-    bottom: 14px;
-    border-radius: 22px;
+    border-radius: inherit;
   }
 
   .mountains span {
@@ -1724,11 +1814,12 @@ h2 {
   }
 
   .map-panel {
-    min-height: 520px;
+    min-height: 0;
   }
 
   .map-panel img {
-    width: 124px;
+    width: 100%;
+    height: 100%;
   }
 
   .map-pin span {
